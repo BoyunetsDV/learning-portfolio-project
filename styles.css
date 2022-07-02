@@ -1,0 +1,196 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body::before {
+    position: fixed;
+    content: "";
+    background: linear-gradient(120deg, rgba(62, 89, 188, 0.95), rgba(180, 176, 237, 0.95));
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar {
+    margin-left: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar a {
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#navbar a:first-child, #navbar a:last-child {
+    border: none;
+}
+
+main {
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10rem 5rem 5rem 5rem;
+}
+
+#welcome-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#image {
+    width: 20%;
+    height: fit-content;
+    display: block;
+    padding: 1rem;
+}
+
+#title {
+    max-width: 80%;
+    padding: 1rem;
+}
+
+#title h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+#title p:nth-child(2) {
+    font-size: 1.5rem;
+    color: #28312f;
+}
+
+#title p {
+    color: white;
+    font-weight: 400;
+}
+
+#career {
+    margin-left: auto;
+    width: 60%;
+}
+
+#career h2 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+#career ul {
+    list-style: none;
+}
+
+#career ul li {
+    padding: 0.5rem 1.5rem;
+    color: #28312f;
+}
+
+#career ul li::before {
+    content: '-- ';
+    margin-left: -1.3rem;
+    padding-right: 0.2rem;
+    color: white;
+}
+
+.next {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.next a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 30%;
+    transform: scale(3) scaleX(4) rotate(90deg);
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-tile {
+    display: block;
+    height: 20rem;
+    border: 1px solid white;
+    width: 30%;
+    text-align: center;
+    padding-top: 8rem;
+    font-size: 2rem;
+    color: white;
+    margin-top: 2rem;
+    text-decoration: none;
+    overflow-x: clip;
+}
+
+#contact {
+    margin-top: 2rem;
+    background-color: black;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+#contact p a {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    #image {
+        width: 50%;
+    }
+    #title {
+        width: 50%;
+    }
+    .project-tile {
+        width: 45%;
+    }
+}
